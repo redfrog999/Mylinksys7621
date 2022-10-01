@@ -35,8 +35,8 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package
 cd package/emortal/
 rm -rf lua-maxminddb
 git clone https://github.com/jerrykuku/lua-maxminddb.git
-#rm -rf luci-app-vssr
-#git clone https://github.com/jerrykuku/luci-app-vssr.git
+rm -rf luci-app-vssr
+git clone https://github.com/jerrykuku/luci-app-vssr.git
 rm -rf luci-theme-argon  
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 #rm -rf luci-theme-neobird
