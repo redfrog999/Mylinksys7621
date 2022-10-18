@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt R6800 Hwnat
+name: OpenWrt AC85P Hwnat
 
 on:
   repository_dispatch:
