@@ -10,7 +10,7 @@ on:
         description: 'SSH connection to Actions'
 
 env:
-  REPO_URL: https://github.com/padavanonly/immortalwrt
+  REPO_URL: https://github.com/redfrog999/immortalwrtmt7622
   REPO_BRANCH: master
   DEVICE_NAME: Ramips-Hnat
   FILES: ramips-hnat/files
