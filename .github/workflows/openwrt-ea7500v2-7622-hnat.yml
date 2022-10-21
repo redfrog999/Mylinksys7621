@@ -18,7 +18,7 @@ on:
 env:
 # REPO_URL: https://github.com/redfrog999000/immortalwrt.OLD
   REPO_URL: https://github.com/redfrog999/immortalwrtmt7622
-  REPO_BRANCH: master
+  REPO_BRANCH: openwrt-18.06-k5.4
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
   CONFIG_FILE: ramips-hnat/.config.ea7500v2-7622.hnat
