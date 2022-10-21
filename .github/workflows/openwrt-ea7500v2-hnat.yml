@@ -17,7 +17,7 @@ on:
 
 env:
 # REPO_URL: https://github.com/redfrog999000/immortalwrt.OLD
-  REPO_URL: https://github.com/redfrog999/immortalwrtmt7622
+  REPO_URL: https://github.com/redfrog999/immortalwrt-dans
   REPO_BRANCH: master
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
