@@ -22,6 +22,8 @@ rm -rf package/helloworld
 git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 rm -rf package/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
+rm -rf package/smartdns
+git clone https://github.com/pymumu/smartdns
 
 cd package/lean/
 rm -rf lua-maxminddb
