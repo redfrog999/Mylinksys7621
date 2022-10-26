@@ -23,7 +23,7 @@ git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 rm -rf package/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 rm -rf package/smartdns
-git clone https://github.com/pymumu/smartdns
+git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/applications/luci-app-smartdns
 
 cd package/lean/
 rm -rf lua-maxminddb
