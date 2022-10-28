@@ -4821,7 +4821,6 @@ CONFIG_PACKAGE_luci-app-mtwifi=y
 # CONFIG_PACKAGE_luci-app-olsr is not set
 # CONFIG_PACKAGE_luci-app-olsr-services is not set
 # CONFIG_PACKAGE_luci-app-olsr-viz is not set
-# CONFIG_PACKAGE_luci-app-omcproxy is not set
 # CONFIG_PACKAGE_luci-app-onliner is not set
 # CONFIG_PACKAGE_luci-app-openclash is not set
 # CONFIG_PACKAGE_luci-app-openvpn is not set
@@ -6073,23 +6072,6 @@ CONFIG_PACKAGE_shadowsocksr-libev-ssr-local=y
 # CONFIG_PACKAGE_shadowsocksr-libev-ssr-nat is not set
 CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir=y
 CONFIG_PACKAGE_shadowsocksr-libev-ssr-server=y
-# CONFIG_PACKAGE_sing-box is not set
-
-#
-# Customizing build tags
-#
-# CONFIG_SING_BOX_BUILD_ACME is not set
-CONFIG_SING_BOX_BUILD_CLASH_API=y
-# CONFIG_SING_BOX_BUILD_ECH is not set
-# CONFIG_SING_BOX_BUILD_GRPC is not set
-# CONFIG_SING_BOX_BUILD_GVISOR is not set
-CONFIG_SING_BOX_BUILD_QUIC=y
-# CONFIG_SING_BOX_BUILD_SHADOWSOCKSR is not set
-CONFIG_SING_BOX_BUILD_UTLS=y
-# CONFIG_SING_BOX_BUILD_V2RAY_API is not set
-CONFIG_SING_BOX_BUILD_WIREGUARD=y
-# end of Customizing build tags
-
 # CONFIG_PACKAGE_sockd is not set
 # CONFIG_PACKAGE_socksify is not set
 # CONFIG_PACKAGE_spawn-fcgi is not set
@@ -7243,4 +7225,4 @@ CONFIG_PACKAGE_ubi-utils=y
 # end of Font-Utils
 # end of Xorg
 
-CONFIG_OVERRIDE_PKGS="brook chinadns-ng dns2socks dns2tcp hysteria ipt2socks lua-maxminddb lua-neturl luci-app-ssr-plus luci-app-vssr luci-theme-argon microsocks naiveproxy pdnsd-alt sagernet-core shadowsocks-rust shadowsocksr-libev simple-obfs ssocks tcping trojan trojan-go trojan-plus v2ray-core v2ray-geodata v2ray-plugin v2raya xray-core xray-plugin"
+CONFIG_OVERRIDE_PKGS="lua-maxminddb"
