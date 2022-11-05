@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: EA7500v2 LEDE
+name: EA7500v2 798x
 
 on:
   repository_dispatch:
@@ -16,13 +16,13 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/redfrog999000/immortalwrt
   REPO_BRANCH: master
   FILES: ramips/files
-  FEEDS_CONF: ramips/feeds.conf.default.bak
-  CONFIG_FILE: ramips/.config.ea7500v2.lede
-  DIY_P1_SH: ramips/diy-part1.sh
-  DIY_P2_SH: ramips/diy-part2.sh
+  FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
+  CONFIG_FILE: ramips-hnat/.config.ea7500v2.hnat
+  DIY_P1_SH: ramips-hnat/diy-part1.sh
+  DIY_P2_SH: ramips-hnat/diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
