@@ -4971,7 +4971,7 @@ CONFIG_PACKAGE_luci-app-zerotier=y
 #
 # CONFIG_PACKAGE_luci-theme-Butterfly is not set
 # CONFIG_PACKAGE_luci-theme-Butterfly-dark is not set
-CONFIG_PACKAGE_luci-theme-argon=y
+# CONFIG_PACKAGE_luci-theme-argon is not set
 # CONFIG_PACKAGE_luci-theme-argon-dark-mod is not set
 # CONFIG_PACKAGE_luci-theme-argon-light-mod is not set
 # CONFIG_PACKAGE_luci-theme-argon-mc is not set
