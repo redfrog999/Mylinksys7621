@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: AC85P 798x
+name: AC85P 7629 Hnat
 
 on:
   repository_dispatch:
