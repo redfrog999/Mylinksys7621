@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2 Hnat
+name: OpenWrt EA7500v2 Update
 
 on:
   repository_dispatch:
