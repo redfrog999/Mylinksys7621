@@ -15,7 +15,7 @@ env:
   DEVICE_NAME: Ramips
   FILES: ramips/files
   FEEDS_CONF: ramips/feeds.conf.default.bak
-  CONFIG_FILE: ramips/.config.ea7500v2.798xFixed
+  CONFIG_FILE: ramips/.config.ea7500v2.798x
   DIY_P1_SH: ramips/diy-part1.sh
   DIY_P2_SH: ramips/diy-part2.sh
   TZ: Asia/Shanghai
