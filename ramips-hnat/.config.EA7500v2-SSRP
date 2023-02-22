@@ -4835,15 +4835,15 @@ CONFIG_PACKAGE_iptables-mod-tproxy=y
 # CONFIG_PACKAGE_luci-app-oscam is not set
 # CONFIG_PACKAGE_luci-app-p910nd is not set
 # CONFIG_PACKAGE_luci-app-pagekitec is not set
-CONFIG_PACKAGE_luci-app-passwall=y
+# CONFIG_PACKAGE_luci-app-passwall is not set
 
 #
 # Configuration
 #
-CONFIG_PACKAGE_luci-app-passwall_Iptables_Transparent_Proxy=y
+# CONFIG_PACKAGE_luci-app-passwall_Iptables_Transparent_Proxy is not set
 # CONFIG_PACKAGE_luci-app-passwall_Nftables_Transparent_Proxy is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook is not set
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Haproxy is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Hysteria is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_NaiveProxy is not set
@@ -4858,7 +4858,7 @@ CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin is not set
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray=y
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray_Plugin is not set
 # end of Configuration
 
@@ -4896,18 +4896,18 @@ CONFIG_PACKAGE_luci-app-socat=y
 # CONFIG_PACKAGE_luci-app-ssocks is not set
 # CONFIG_PACKAGE_luci-app-ssr-libev-server is not set
 # CONFIG_PACKAGE_luci-app-ssr-mudb-server is not set
-# CONFIG_PACKAGE_luci-app-ssr-plus is not set
+CONFIG_PACKAGE_luci-app-ssr-plus=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Client is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Server is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server is not set
-# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NONE_V2RAY is not set
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NONE_V2RAY=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray is not set
-# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray is not set
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_SagerNet_Core is not set
-# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG is not set
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
@@ -4938,7 +4938,7 @@ CONFIG_PACKAGE_TURBOACC_INCLUDE_BBR_CCA=y
 # CONFIG_PACKAGE_TURBOACC_INCLUDE_DNSPROXY is not set
 # CONFIG_PACKAGE_luci-app-udp2raw is not set
 # CONFIG_PACKAGE_luci-app-udpxy is not set
-# CONFIG_PACKAGE_luci-app-uhttpd is not set
+CONFIG_PACKAGE_luci-app-uhttpd=y
 # CONFIG_PACKAGE_luci-app-unblockmusic is not set
 # CONFIG_UnblockNeteaseMusic_Go is not set
 # CONFIG_PACKAGE_luci-app-unblockneteasemusic-go is not set
@@ -4954,12 +4954,12 @@ CONFIG_PACKAGE_luci-app-vlmcsd=y
 # CONFIG_PACKAGE_luci-app-vpn-policy-routing is not set
 # CONFIG_PACKAGE_luci-app-vpnbypass is not set
 CONFIG_PACKAGE_luci-app-vsftpd=y
-CONFIG_PACKAGE_luci-app-vssr=y
+# CONFIG_PACKAGE_luci-app-vssr is not set
 # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Hysteria is not set
 # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Kcptun is not set
 # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Libev_Server is not set
 # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan is not set
-CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray=y
+# CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray is not set
 # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray_plugin is not set
 # CONFIG_PACKAGE_luci-app-watchcat is not set
 CONFIG_PACKAGE_luci-app-webadmin=y
@@ -4970,7 +4970,7 @@ CONFIG_PACKAGE_luci-app-wireguard=y
 CONFIG_PACKAGE_luci-app-wol=y
 # CONFIG_PACKAGE_luci-app-wrtbwmon is not set
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set
-# CONFIG_PACKAGE_luci-app-zerotier is not set
+CONFIG_PACKAGE_luci-app-zerotier=
 # end of 3. Applications
 
 #
@@ -5165,7 +5165,7 @@ CONFIG_PACKAGE_luci-i18n-turboacc-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-uhttpd-ja is not set
 # CONFIG_PACKAGE_luci-i18n-uhttpd-pt-br is not set
 # CONFIG_PACKAGE_luci-i18n-uhttpd-ru is not set
-# CONFIG_PACKAGE_luci-i18n-uhttpd-zh-cn is not set
+CONFIG_PACKAGE_luci-i18n-uhttpd-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-ca is not set
 # CONFIG_PACKAGE_luci-i18n-upnp-cs is not set
 # CONFIG_PACKAGE_luci-i18n-upnp-de is not set
@@ -5231,7 +5231,7 @@ CONFIG_PACKAGE_luci-i18n-wireguard-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-wol-vi is not set
 CONFIG_PACKAGE_luci-i18n-wol-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-wol-zh-tw is not set
-# CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn is not set
+CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y
 # end of LuCI
 
 #
@@ -5965,7 +5965,7 @@ CONFIG_PACKAGE_openssh-sftp-server=y
 # CONFIG_PACKAGE_vpnc-scripts is not set
 CONFIG_PACKAGE_wireguard-tools=y
 # CONFIG_PACKAGE_xl2tpd is not set
-# CONFIG_PACKAGE_zerotier is not set
+CONFIG_PACKAGE_zerotier is not set
 
 #
 # Configuration
@@ -6074,7 +6074,7 @@ CONFIG_SING_BOX_BUILD_WIREGUARD=y
 # CONFIG_PACKAGE_trojan is not set
 # CONFIG_PACKAGE_trojan-go is not set
 # CONFIG_PACKAGE_trojan-plus is not set
-# CONFIG_PACKAGE_uhttpd is not set
+CONFIG_PACKAGE_uhttpd=y
 # CONFIG_PACKAGE_uhttpd-mod-lua is not set
 CONFIG_PACKAGE_uhttpd-mod-ubus=y
 # CONFIG_PACKAGE_uwsgi is not set
