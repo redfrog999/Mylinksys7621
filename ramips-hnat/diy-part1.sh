@@ -16,7 +16,7 @@
 # Add a feed source
 # echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-echo 'src-git adguardhome https://github.com/AdguardTeam/AdGuardHome.git' >>feeds.conf.default
+echo 'src-git adguardhome https://github.com/AdguardTeam/AdGuardHome' >>feeds.conf.default
 
 # 添加插件源码
 # sed -i '$a src-git-full kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
