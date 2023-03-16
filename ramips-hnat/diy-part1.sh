@@ -14,7 +14,6 @@
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-# sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-
-# rm -rf target/linux/ramips
-# svn export https://github.com/padavanonly/immortalwrt/trunk/target/linux/ramips target/linux/ramips
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+echo 'src-git adguardhome https://github.com/AdguardTeam/AdGuardHome' >>feeds.conf.default
