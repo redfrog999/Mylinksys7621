@@ -1880,8 +1880,8 @@ CONFIG_ZABBIX_POSTGRESQL=y
 #
 # Extra packages
 #
-# CONFIG_PACKAGE_automount is not set
-# CONFIG_PACKAGE_autosamba is not set
+CONFIG_PACKAGE_automount=y
+CONFIG_PACKAGE_autosamba=y
 CONFIG_PACKAGE_ipv6helper=y
 # CONFIG_PACKAGE_jose is not set
 CONFIG_PACKAGE_libiwinfo-data=y
@@ -4994,7 +4994,7 @@ CONFIG_PACKAGE_luci-app-zerotier=y
 # CONFIG_PACKAGE_luci-theme-argonv2 is not set
 # CONFIG_PACKAGE_luci-theme-argonv3 is not set
 # CONFIG_PACKAGE_luci-theme-atmaterial is not set
-# CONFIG_PACKAGE_luci-theme-atmaterial_new is not set
+CONFIG_PACKAGE_luci-theme-atmaterial_new=y
 CONFIG_PACKAGE_luci-theme-bootstrap=y
 # CONFIG_PACKAGE_luci-theme-bootstrap-mod is not set
 # CONFIG_PACKAGE_luci-theme-darkmatter is not set
