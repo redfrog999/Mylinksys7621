@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDCloud PSWADGOPC
+name: OpenWrt JDCloud OPCSMD
 
 on:
   repository_dispatch:
