@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2 ADGOPC
+name: OpenWrt EA7500v2 ADGNoCoreOPC4
 
 on:
   repository_dispatch:
