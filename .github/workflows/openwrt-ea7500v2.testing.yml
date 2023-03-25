@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2 Testing
+name: OpenWrt EA7500v2 SB4Testing
 
 on:
   repository_dispatch:
