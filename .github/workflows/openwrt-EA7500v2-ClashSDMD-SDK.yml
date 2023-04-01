@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2 PS2-SDK
+name: OpenWrt EA7500v2 Clash-SDK
 
 on:
   repository_dispatch:
