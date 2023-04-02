@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDCloud OPCSMDSB4
+name: OpenWrt JDCloud SMDSB4
 
 on:
   repository_dispatch:
