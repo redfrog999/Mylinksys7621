@@ -2783,12 +2783,12 @@ CONFIG_PACKAGE_kmod-usb-serial-belkin=y
 # CONFIG_PACKAGE_kmod-usb-serial-ch341 is not set
 # CONFIG_PACKAGE_kmod-usb-serial-cp210x is not set
 CONFIG_PACKAGE_kmod-usb-serial-cypress-m8=y
-# CONFIG_PACKAGE_kmod-usb-serial-edgeport is not set
+CONFIG_PACKAGE_kmod-usb-serial-edgeport=y
 # CONFIG_PACKAGE_kmod-usb-serial-ftdi is not set
 # CONFIG_PACKAGE_kmod-usb-serial-garmin is not set
 # CONFIG_PACKAGE_kmod-usb-serial-ipw is not set
-# CONFIG_PACKAGE_kmod-usb-serial-keyspan is not set
-# CONFIG_PACKAGE_kmod-usb-serial-mct is not set
+CONFIG_PACKAGE_kmod-usb-serial-keyspan=y
+CONFIG_PACKAGE_kmod-usb-serial-mct=y
 # CONFIG_PACKAGE_kmod-usb-serial-mos7720 is not set
 # CONFIG_PACKAGE_kmod-usb-serial-mos7840 is not set
 # CONFIG_PACKAGE_kmod-usb-serial-option is not set
@@ -2845,7 +2845,7 @@ CONFIG_PACKAGE_kmod-usbmon=y
 # WPAN 802.15.4 Support
 #
 # CONFIG_PACKAGE_kmod-at86rf230 is not set
-# CONFIG_PACKAGE_kmod-atusb is not set
+CONFIG_PACKAGE_kmod-atusb=y
 # CONFIG_PACKAGE_kmod-ca8210 is not set
 # CONFIG_PACKAGE_kmod-cc2520 is not set
 # CONFIG_PACKAGE_kmod-fakelb is not set
