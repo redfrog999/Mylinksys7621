@@ -2789,11 +2789,11 @@ CONFIG_PACKAGE_kmod-usb-serial-edgeport=y
 # CONFIG_PACKAGE_kmod-usb-serial-ipw is not set
 CONFIG_PACKAGE_kmod-usb-serial-keyspan=y
 CONFIG_PACKAGE_kmod-usb-serial-mct=y
-# CONFIG_PACKAGE_kmod-usb-serial-mos7720 is not set
-# CONFIG_PACKAGE_kmod-usb-serial-mos7840 is not set
-# CONFIG_PACKAGE_kmod-usb-serial-option is not set
-# CONFIG_PACKAGE_kmod-usb-serial-oti6858 is not set
-# CONFIG_PACKAGE_kmod-usb-serial-pl2303 is not set
+CONFIG_PACKAGE_kmod-usb-serial-mos7720=y
+CONFIG_PACKAGE_kmod-usb-serial-mos7840=y
+CONFIG_PACKAGE_kmod-usb-serial-option=y
+CONFIG_PACKAGE_kmod-usb-serial-oti6858=y
+CONFIG_PACKAGE_kmod-usb-serial-pl2303=y
 CONFIG_PACKAGE_kmod-usb-serial-qualcomm=y
 CONFIG_PACKAGE_kmod-usb-serial-sierrawireless=y
 # CONFIG_PACKAGE_kmod-usb-serial-simple is not set
