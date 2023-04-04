@@ -2092,14 +2092,14 @@ CONFIG_PACKAGE_libiwinfo-data=y
 # CONFIG_PACKAGE_kmod-dm is not set
 # CONFIG_PACKAGE_kmod-dm-raid is not set
 # CONFIG_PACKAGE_kmod-iosched-bfq is not set
-# CONFIG_PACKAGE_kmod-iscsi-initiator is not set
+CONFIG_PACKAGE_kmod-iscsi-initiator=y
 # CONFIG_PACKAGE_kmod-loop is not set
 # CONFIG_PACKAGE_kmod-md-mod is not set
 # CONFIG_PACKAGE_kmod-nbd is not set
-# CONFIG_PACKAGE_kmod-scsi-cdrom is not set
+CONFIG_PACKAGE_kmod-scsi-cdrom=y
 CONFIG_PACKAGE_kmod-scsi-core=y
-# CONFIG_PACKAGE_kmod-scsi-generic is not set
-# CONFIG_PACKAGE_kmod-scsi-tape is not set
+CONFIG_PACKAGE_kmod-scsi-generic=y
+CONFIG_PACKAGE_kmod-scsi-tape=y
 # end of Block Devices
 
 #
@@ -6538,7 +6538,7 @@ CONFIG_PACKAGE_socat=y
 # CONFIG_PACKAGE_tcping is not set
 # CONFIG_PACKAGE_tcping-simple is not set
 # CONFIG_PACKAGE_tcpping is not set
-# CONFIG_PACKAGE_tgt is not set
+CONFIG_PACKAGE_tgt=y
 # CONFIG_PACKAGE_tinyPortMapper is not set
 # CONFIG_PACKAGE_tmate-ssh-server is not set
 # CONFIG_PACKAGE_tor is not set
