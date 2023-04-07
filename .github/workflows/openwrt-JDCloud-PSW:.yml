@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDCloud SMDSB4
+name: OpenWrt JDCloud PSWMOS
 
 on:
   repository_dispatch:
