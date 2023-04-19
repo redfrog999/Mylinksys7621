@@ -1,7 +1,7 @@
 # Description: 此脚本基于 P3TERX 的 Actions-OpenWrt 仓库修改而来。
 # 用于生成config配置文件
 
-name: MakeCfg-JDC-Elite
+name: MakeCfg-JDC-Full
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ env:
   DEVICE_NAME: Ramips-Hnat
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.jdcloud-elite.hnat
+  CONFIG_FILE: ramips-hnat/.config.jdcloud-full.hnat
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   TZ: Asia/Shanghai
