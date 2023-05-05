@@ -16,7 +16,7 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  REPO_URL: https://github.com/Lienol/openwrt
+  REPO_URL: https://github.com/redfrog999/openwrt
   #REPO_URL: https://github.com/redfrog999/openwrt
   REPO_BRANCH: 22.03
   #REPO_BRANCH: 21.02
