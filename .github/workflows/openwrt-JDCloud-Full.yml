@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDCloud Full
+name: OpenWrt JDCloud 237-Full
 
 on:
   repository_dispatch:
