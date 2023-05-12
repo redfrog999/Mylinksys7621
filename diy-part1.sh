@@ -24,3 +24,4 @@ echo 'src-git-full luci https://github.com/immortalwrt/luci.git' >>feeds.conf.de
 # 添加插件源码
 # sed -i '$a src-git-full kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git-full packages https://github.com/immortalwrt/packages.git' feeds.conf.default
+sed -i '$a src-git-full luci https://github.com/immortalwrt/luci.git' feeds.conf.default
