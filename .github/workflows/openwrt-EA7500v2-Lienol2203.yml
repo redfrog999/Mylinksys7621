@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2 PSWSSR-22.03
+name: OpenWrt EA7500v2 Lienol-22.03
 
 on:
   repository_dispatch:
