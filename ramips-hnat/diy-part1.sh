@@ -18,7 +18,7 @@
 # echo 'src-git packages https://github.com/immortalwrt/packages.git' >>feeds.conf.default
 # echo 'src-git luci https://github.com/immortalwrt/luci.git' >>feeds.conf.default
 # echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
-# echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 # echo 'src-git adguardhome https://github.com/AdguardTeam/AdGuardHome.git' >>feeds.conf.default
 # echo 'src-git openclash https://github.com/vernesong/OpenClash.git' >>feeds.conf.default
 
