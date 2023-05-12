@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDCloud 1907
+name: OpenWrt JDCloud Openwrt
 
 on:
   repository_dispatch:
