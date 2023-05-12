@@ -17,8 +17,8 @@ on:
 
 env:
   #REPO_URL: https://github.com/redfrog999/immortalwrt
-  REPO_URL: https://github.com/redfrog999/openwrt
-  REPO_BRANCH: 19.07
+  REPO_URL: https://github.com/redfrog999/openwrt-1
+  REPO_BRANCH: master
   #REPO_BRANCH: master
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
