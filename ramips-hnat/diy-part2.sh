@@ -21,3 +21,5 @@ rm -rf package/helloworld
 git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 rm -rf package/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall package/pa
+rm -rf luci-app-vssr
+git clone https://github.com/jerrykuku/luci-app-vssr.git
