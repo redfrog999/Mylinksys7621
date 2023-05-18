@@ -5570,7 +5570,7 @@ CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y
 #
 # Download Manager
 #
-CONFIG_PACKAGE_ariang=y
+# CONFIG_PACKAGE_ariang is not set
 # CONFIG_PACKAGE_ariang-nginx is not set
 # CONFIG_PACKAGE_baidupcs-web is not set
 # CONFIG_PACKAGE_pandownload-fake-server is not set
@@ -5581,7 +5581,7 @@ CONFIG_PACKAGE_ariang=y
 #
 # File Transfer
 #
-CONFIG_PACKAGE_aria2=y
+# CONFIG_PACKAGE_aria2 is not set
 
 #
 # Aria2 Configuration
