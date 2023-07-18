@@ -10,9 +10,9 @@ on:
         description: 'SSH connection to Actions'
 
 env:
-  REPO_URL: https://github.com/redfrog999/immortalwrt-mt798x
+  REPO_URL: https://github.com/redfrog999/openwrt
   #REPO_URL: https://github.com/redfrog999/immortalwrt
-  REPO_BRANCH: openwrt-21.02
+  REPO_BRANCH: main
   #REPO_BRANCH: master
   DEVICE_NAME: Ramips-Hnat
   FILES: ramips-hnat/files
