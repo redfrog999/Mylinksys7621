@@ -219,6 +219,7 @@ CONFIG_DEFAULT_kmod-mt7615-firmware=y
 CONFIG_DEFAULT_kmod-mt7615e=y
 CONFIG_DEFAULT_kmod-nf-nathelper=y
 CONFIG_DEFAULT_kmod-nf-nathelper-extra=y
+CONFIG_DEFAULT_kmod-ramips_hnat=y
 CONFIG_DEFAULT_kmod-usb3=y
 CONFIG_DEFAULT_libc=y
 CONFIG_DEFAULT_libgcc=y
