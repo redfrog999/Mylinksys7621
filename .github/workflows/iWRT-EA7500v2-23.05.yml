@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: immortalWrt EA7500v2 23.05
+name: iWrt EA7500v2 23.05
 
 on:
   repository_dispatch:
