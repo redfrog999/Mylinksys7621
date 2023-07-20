@@ -1,7 +1,7 @@
 # Description: 此脚本基于 P3TERX 的 Actions-OpenWrt 仓库修改而来。
 # 用于生成config配置文件
 
-name: MakeCfg-EA7500v2-2203
+name: MakeCfg-EA7500v2-All
 
 on:
   workflow_dispatch:
@@ -10,11 +10,11 @@ on:
         description: 'SSH connection to Actions'
 
 env:
-  #REPO_URL: https://github.com/redfrog999/openwrt
-  REPO_URL: https://github.com/redfrog999/immortalwrt-111
-  #REPO_BRANCH: main
+  REPO_URL: https://github.com/redfrog999/jdc-lede
+  #REPO_URL: https://github.com/redfrog999/immortalwrt
+  REPO_BRANCH: master
   #REPO_BRANCH: openwrt-23.05
-  REPO_BRANCH: openwrt-21.02
+  #REPO_BRANCH: openwrt-21.02
   DEVICE_NAME: Ramips-Hnat
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
