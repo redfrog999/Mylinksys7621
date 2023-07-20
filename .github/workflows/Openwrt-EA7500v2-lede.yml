@@ -16,7 +16,7 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  REPO_URL: https://github.com/redfrog999/jdc-lede
+  REPO_URL: https://github.com/RavenCage/lede
   #REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   #REPO_BRANCH: openwrt-21.02
