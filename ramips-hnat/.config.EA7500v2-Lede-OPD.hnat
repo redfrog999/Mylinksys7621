@@ -3068,8 +3068,8 @@ CONFIG_MTK_RT_FIRST_CARD=7615
 CONFIG_MTK_RT_SECOND_CARD=7615
 CONFIG_MTK_RT_FIRST_IF_RF_OFFSET=0xc0000
 CONFIG_MTK_RT_SECOND_IF_RF_OFFSET=0xc8000
-CONFIG_MTK_MT_WIFI=y
-CONFIG_MTK_MT_WIFI_PATH="mt_wifi"
+# CONFIG_MTK_MT_WIFI is not set
+# CONFIG_MTK_MT_WIFI_PATH="mt_wifi"
 
 #
 # WiFi Generic Feature Options
@@ -6338,7 +6338,7 @@ CONFIG_PACKAGE_uhttpd-mod-ubus=y
 # CONFIG_PACKAGE_hcxdumptool is not set
 # CONFIG_PACKAGE_hcxtools is not set
 # CONFIG_PACKAGE_horst is not set
-CONFIG_PACKAGE_mt_wifi=y
+# CONFIG_PACKAGE_mt_wifi is not set
 
 #
 # MT_WIFI Configuration
