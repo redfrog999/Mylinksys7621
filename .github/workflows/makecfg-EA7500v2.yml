@@ -20,7 +20,6 @@ env:
   #CONFIG_FILE: ramips-hnat/.config.EA7500v2-Lede-OPD.hnat
   CONFIG_FILE: ramips-hnat/.config.EA7500v2-PSW.hnat
   #CONFIG_FILE: ramips-hnat/.config.EA7500v2-lede.hnat
-  CONFIG_FILE: ramips-hnat/.config
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   TZ: Asia/Shanghai
