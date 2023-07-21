@@ -18,7 +18,7 @@ env:
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
   #CONFIG_FILE: ramips-hnat/.config.EA7500v2-Lede-OPD.hnat
-  #CONFIG_FILE: ramips-hnat/.config.EA7500v2-PSW.hnat
+  CONFIG_FILE: ramips-hnat/.config.EA7500v2-PSW.hnat
   #CONFIG_FILE: ramips-hnat/.config.EA7500v2-lede.hnat
   CONFIG_FILE: ramips-hnat/.config
   DIY_P1_SH: ramips-hnat/diy-part1.sh
