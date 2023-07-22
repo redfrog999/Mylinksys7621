@@ -24,8 +24,8 @@ env:
   #REPO_BRANCH: main
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  #CONFIG_FILE: ramips-hnat/.config.JDCloud-Lede-OPD.hnat
-  CONFIG_FILE: ramips-hnat/.config.JDCloud-Lede.hnat
+  CONFIG_FILE: ramips-hnat/.config.JDCloud-Lede-OPD.hnat
+  #CONFIG_FILE: ramips-hnat/.config.JDCloud-Lede.hnat
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   UPLOAD_BIN_DIR: false
