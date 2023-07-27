@@ -10,8 +10,8 @@ on:
         description: 'SSH connection to Actions'
 
 env:
-  #REPO_URL: https://github.com/RavenCage/lede
-  REPO_URL: https://github.com/redfrog999/jdc-lede
+  REPO_URL: https://github.com/RavenCage/lede
+  #REPO_URL: https://github.com/redfrog999/jdc-lede
   #REPO_URL: https://github.com/redfrog999/imoutowrt
   REPO_BRANCH: master
   #REPO_BRANCH: 2102-ramips-mt76
