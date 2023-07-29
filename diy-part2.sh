@@ -18,3 +18,8 @@ sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_genera
 
 # 修改默认wifi密码key为123456789
 # sed -i 's/encryption=none/encryption=sae-mixed/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+# remove v2ray-geodata package from feeds (openwrt-22.03 & master)
+rm -rf feeds/packages/net/v2ray-geodata
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/net/mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
