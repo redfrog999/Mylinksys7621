@@ -14,14 +14,14 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-echo 'src-git-full packages https://github.com/immortalwrt/packages.git' >>feeds.conf.default
-echo 'src-git-full luci https://github.com/immortalwrt/luci.git' >>feeds.conf.default
-# echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+#echo 'src-git-full packages https://github.com/immortalwrt/packages.git' >>feeds.conf.default
+#echo 'src-git-full luci https://github.com/immortalwrt/luci.git' >>feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 # echo 'src-git adguardhome https://github.com/AdguardTeam/AdGuardHome.git' >>feeds.conf.default
 # echo 'src-git openclash https://github.com/vernesong/OpenClash.git' >>feeds.conf.default
 
 # 添加插件源码
 # sed -i '$a src-git-full kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git-full packages https://github.com/immortalwrt/packages.git' feeds.conf.default
-sed -i '$a src-git-full luci https://github.com/immortalwrt/luci.git' feeds.conf.default
+# sed -i '$a src-git-full packages https://github.com/immortalwrt/packages.git' feeds.conf.default
+# sed -i '$a src-git-full luci https://github.com/immortalwrt/luci.git' feeds.conf.default
