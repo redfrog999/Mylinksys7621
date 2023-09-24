@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2 Rust.DU3
+name: OpenWrt EA7500v2 Rust
 
 on:
   repository_dispatch:
