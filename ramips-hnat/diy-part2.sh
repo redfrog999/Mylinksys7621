@@ -18,6 +18,9 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package
 #
 
 # remove v2ray-geodata package from feeds (openwrt-22.03 & master)
-rm -rf feeds/packages/net/v2ray-geodata
+# drop mosdns and v2ray-geodata packages that come with the source
+# rm -rf feeds/packages/net/v2ray-geodata
+find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/net/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
