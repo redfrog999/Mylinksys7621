@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2 Rust
+name: OpenWrt EA7500v2-237-full-Rust
 
 on:
   repository_dispatch:
@@ -17,7 +17,7 @@ on:
 
 env:
   #REPO_URL: https://github.com/RavenCage/lede
-  REPO_URL: https://github.com/redfrog999/jdc-lede
+  REPO_URL: https://github.com/redfrog999/237-immortalwrt
   REPO_BRANCH: master
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
