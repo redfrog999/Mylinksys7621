@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2 lede
+name: OpenWrt JDCloud-237-Rust 
 
 on:
   repository_dispatch:
@@ -17,11 +17,11 @@ on:
 
 env:
   #REPO_URL: https://github.com/RavenCage/lede
-  REPO_URL: https://github.com/redfrog999/jdc-lede
+  REPO_URL: https://github.com/redfrog999/237-immortalwrt
   REPO_BRANCH: master
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.EA7500v2-lede.hnat
+  CONFIG_FILE: ramips-hnat/.config.JDCloud-237-Rust.hnat
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   UPLOAD_BIN_DIR: false
