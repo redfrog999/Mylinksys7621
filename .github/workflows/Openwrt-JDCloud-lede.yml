@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt JDCloud Lede
+name: Openwrt JDCloud tian0
 
 on:
   repository_dispatch:
@@ -17,13 +17,13 @@ on:
 
 env:
   #REPO_URL: https://github.com/RavenCage/lede
-  REPO_URL: https://github.com/redfrog999/jdc-lede
+  REPO_URL: https://github.com/redfrog999/imoutowrt
   REPO_BRANCH: master
   #REPO_BRANCH: openwrt-21.02
   #REPO_BRANCH: main
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.JDCloud-Lede.hnat
+  CONFIG_FILE: ramips-hnat/.config-tian0
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   UPLOAD_BIN_DIR: false
