@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt JDCloud tian0
+name: Openwrt JDCloud tian0 RUST
 
 on:
   repository_dispatch:
