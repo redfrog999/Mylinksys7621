@@ -1,7 +1,7 @@
 # Description: 此脚本基于 P3TERX 的 Actions-OpenWrt 仓库修改而来。
 # 用于生成config配置文件
 
-name: MakeCfg-JDCloud-tian0
+name: MakeCfg-JDCloud-rust
 
 on:
   workflow_dispatch:
@@ -11,12 +11,12 @@ on:
 
 env:
   #REPO_URL: https://github.com/redfrog999/jdc-lede
-  REPO_URL: https://github.com/redfrog999/immortalwrt
+  REPO_URL: https://github.com/redfrog999/237-immortalwrt
   REPO_BRANCH: openwrt-21.02
   DEVICE_NAME: Ramips-Hnat
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config-tian0
+  CONFIG_FILE: ramips-hnat/.config.JDCLoud-237-Rust.hnat
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   TZ: Asia/Shanghai
