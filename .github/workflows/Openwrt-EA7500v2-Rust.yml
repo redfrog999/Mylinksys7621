@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2-237-full-Rust
+name: OpenWrt EA7500v2-237-Adbyby
 
 on:
   repository_dispatch:
