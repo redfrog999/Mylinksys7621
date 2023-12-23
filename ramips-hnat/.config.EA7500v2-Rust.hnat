@@ -5405,7 +5405,7 @@ CONFIG_PACKAGE_luci-i18n-ksmbd-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn is not set
 CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-passwall-zh_Hans is not set
-CONFIG_PACKAGE_luci-i18n-socat-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-socat-zh-cn is not set
 CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-turboacc-mtk-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-ca is not set
