@@ -16,8 +16,7 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  #REPO_URL: https://github.com/RavenCage/lede
-  REPO_URL: https://github.com/redfrog999/237-immortalwrt
+  REPO_URL: https://github.com/RavenCage/237-immortalwrt
   REPO_BRANCH: master
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
