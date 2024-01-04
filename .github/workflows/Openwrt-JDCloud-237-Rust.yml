@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDCloud-237-Rust 
+name: OpenWrt JDCloud-237-Singbox
 
 on:
   repository_dispatch:
