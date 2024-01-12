@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDCloud-237-Singbox
+name: OpenWrt JDCloud-237-Singbox.SMD
 
 on:
   repository_dispatch:
