@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2-237-Nlb+SMD
+name: 废弃暂时不用了
 
 on:
   repository_dispatch:
