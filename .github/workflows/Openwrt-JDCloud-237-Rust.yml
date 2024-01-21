@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDCloud-237-Mosdns.SMD
+name: OpenWrt JDCloud-237-Mosdns.PSW
 
 on:
   repository_dispatch:
