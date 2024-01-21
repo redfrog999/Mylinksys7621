@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 废弃暂时不用了
+name: OpenWrt EA7500v2-237-Cleanest+5G.NR
 
 on:
   repository_dispatch:
