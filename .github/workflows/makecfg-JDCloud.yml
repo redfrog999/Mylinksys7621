@@ -11,12 +11,12 @@ on:
 
 env:
   #REPO_URL: https://github.com/redfrog999/jdc-lede
-  REPO_URL: https://github.com/redfrog999/237-immortalwrt
+  REPO_URL: https://github.com/redfrog999/immortalwrt
   REPO_BRANCH: master
   DEVICE_NAME: Ramips-Hnat
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.JDCloud-237-Rust.hnat
+  CONFIG_FILE: ramips-hnat/.config.JDCloud-tian0.hnat
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   TZ: Asia/Shanghai
