@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2-NoNlbm+PSW+Mos+SMD.Core
+name: OpenWrt EA7500v2-NoNlbm+PSW+Mos
 
 on:
   repository_dispatch:
