@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt 取消此处构建
+name: OpenWrt JDC01-Alist-Ksmbd
 
 on:
   repository_dispatch:
@@ -16,11 +16,11 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  REPO_URL: https://github.com/redfrog999/237-immortalwrt
+  REPO_URL: https://github.com/RavenCage/237-immortalwrt
   REPO_BRANCH: master
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.JDCloud-237-Rust.hnat
+  CONFIG_FILE: ramips-hnat/.config.JDCloud-237-Store.hnat
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   UPLOAD_BIN_DIR: false
