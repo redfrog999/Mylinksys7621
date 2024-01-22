@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2-Clean+NLB++5G.NR
+name: OpenWrt EA7500v2-Relay+NLB++5G.NR
 
 on:
   repository_dispatch:
@@ -20,7 +20,7 @@ env:
   REPO_BRANCH: master
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.EA7500v2-Rust.hnat
+  CONFIG_FILE: ramips-hnat/.config.EA7500v2-Relay.hnat
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   UPLOAD_BIN_DIR: false
