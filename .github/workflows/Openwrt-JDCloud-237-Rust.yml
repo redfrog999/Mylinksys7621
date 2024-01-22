@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDCloud-237-Mosdns.PSW.Nlbwmon
+name: OpenWrt 取消此处构建
 
 on:
   repository_dispatch:
