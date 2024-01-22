@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2-Clean+NLB+SMD.Core+5G.NR
+name: OpenWrt EA7500v2-Clean+NLB++5G.NR
 
 on:
   repository_dispatch:
