@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDC01-Alist-Ksmbd
+name: OpenWrt JDC01-Nlbw-Alist-Ksmbd
 
 on:
   repository_dispatch:
