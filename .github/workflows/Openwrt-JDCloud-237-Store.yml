@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDC01-Mos.Core+Nlbw-Alist-Ksmbd
+name: OpenWrt JDC01-Half-Mos+Store
 
 on:
   repository_dispatch:
