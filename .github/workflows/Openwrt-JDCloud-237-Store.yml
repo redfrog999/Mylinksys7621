@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDC01--Mos+Store
+name: OpenWrt JDC01--Mos5.3.0+Store
 
 on:
   repository_dispatch:
