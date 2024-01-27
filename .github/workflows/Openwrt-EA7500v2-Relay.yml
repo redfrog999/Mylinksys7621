@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2-Relay+Nlbw.USB.Mos
+name: OpenWrt EA7500v2-Relay+Nlbw.USB.Mos5.3.0
 
 on:
   repository_dispatch:
