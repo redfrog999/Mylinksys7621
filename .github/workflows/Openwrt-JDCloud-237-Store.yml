@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDC01-Half.Mos+Store
+name: 暂时取消
 
 on:
   repository_dispatch:
