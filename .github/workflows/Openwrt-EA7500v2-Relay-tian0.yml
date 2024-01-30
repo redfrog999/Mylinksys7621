@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-JDC01_tian0_Full
+name: Openwrt-EA7500v2_tian0_Relay
 
 on:
   repository_dispatch:
