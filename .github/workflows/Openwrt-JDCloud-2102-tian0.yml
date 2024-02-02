@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-JDC01_tian0_Full
+name: Openwrt-JDC01_tian0_21.02-Full
 
 on:
   repository_dispatch:
