@@ -3942,7 +3942,7 @@ CONFIG_OPENSSL_ENGINE_BUILTIN_DEVCRYPTO=y
 # CONFIG_OPENSSL_WITH_GOST is not set
 CONFIG_PACKAGE_libopenssl-conf=y
 # CONFIG_PACKAGE_libopenssl-devcrypto is not set
-# CONFIG_PACKAGE_libwolfssl is not set
+CONFIG_PACKAGE_libwolfssl=y
 
 #
 # wolfSSL Library Configuration
