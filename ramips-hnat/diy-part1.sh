@@ -11,15 +11,15 @@
 #
 
 # Uncomment a feed source
-sed -i "/helloworld/d" "feeds.conf.default"
-echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+#sed -i "/helloworld/d" "feeds.conf.default"
+#echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
 
 # Add a feed source
 echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;luci-smartdns-dev" >> "feeds.conf.default"
 
 # 添加插件源码
-sed -i '$a src-git-full kenzo https://github.com/RavenCage/kenzok8-openwrt-packages' feeds.conf.default
+#sed -i '$a src-git-full kenzo https://github.com/RavenCage/kenzok8-openwrt-packages' feeds.conf.default
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 
