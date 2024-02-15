@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-EA7500v2_22.03_Samba4_Relay
+name: Openwrt-EA7500v2_22.03_Ksmbd_Relay
 
 on:
   repository_dispatch:
