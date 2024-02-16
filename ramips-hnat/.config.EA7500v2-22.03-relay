@@ -259,6 +259,7 @@ CONFIG_DEFAULT_kmod-gpio-button-hotplug=y
 CONFIG_DEFAULT_kmod-leds-gpio=y
 CONFIG_DEFAULT_kmod-mt7615-firmware=y
 CONFIG_DEFAULT_kmod-mt7615e=y
+CONFIG_DEFAULT_kmod-nft-offload=y
 CONFIG_DEFAULT_kmod-usb3=y
 CONFIG_DEFAULT_libc=y
 CONFIG_DEFAULT_libgcc=y
