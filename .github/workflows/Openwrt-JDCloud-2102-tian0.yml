@@ -21,8 +21,8 @@ env:
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
   CONFIG_FILE: ramips-hnat/.config.JDCloud-2102-tian0.hnat
-  DIY_P1_SH: ramips-hnat/diy-part1.sh
-  DIY_P2_SH: ramips-hnat/diy-part2.sh
+  DIY_P1_SH: ramips-hnat/diy-part1-1.sh
+  DIY_P2_SH: ramips-hnat/diy-part2-2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
