@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-JDCloud01_22.03_Full
+name: Openwrt-JDCloud01_22.03_Full_Samba4
 
 on:
   repository_dispatch:
