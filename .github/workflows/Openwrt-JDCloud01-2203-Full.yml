@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-EA7500v2_tian0_Relay
+name: Openwrt-JDCloud01_22.03_Full
 
 on:
   repository_dispatch:
@@ -16,11 +16,11 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  REPO_URL: https://github.com/RavenCage/immortalwrt
-  REPO_BRANCH: openwrt-21.02
+  REPO_URL: https://github.com/RavenCage/openwrt-official
+  REPO_BRANCH: openwrt-22.03
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.EA7500v2-tian0-Relay
+  CONFIG_FILE: ramips-hnat/.config.JDCloud-22.03-Full
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   UPLOAD_BIN_DIR: false
