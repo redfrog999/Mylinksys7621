@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-EA7500v2_22.03_Xray.Go1.22
+name: Openwrt-EA7500v2_22.03_Xray.Go1.21
 
 on:
   repository_dispatch:
