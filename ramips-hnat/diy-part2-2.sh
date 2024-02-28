@@ -21,5 +21,10 @@ find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
 
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-#git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+#git clone https://github.com/RavenCage/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+
+#echo '替换golang到1.22.x'
+#rm -rf feeds/packages/lang/golang
+#git clone -b 22.x --single-branch https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+#echo '=========Replace golang OK!========='
