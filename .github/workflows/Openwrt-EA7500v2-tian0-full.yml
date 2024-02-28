@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2-Samba4.Full-tian0
+name: OpenWrt EA7500v2-Ksmbd.Xray-tian0
 
 on:
   repository_dispatch:
