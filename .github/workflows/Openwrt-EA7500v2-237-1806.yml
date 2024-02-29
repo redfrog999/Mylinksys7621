@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-EA7500v2_1806_237
+name: Openwrt-EA7500v2_1806_237-Ksmbd
 
 on:
   repository_dispatch:
