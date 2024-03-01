@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-JDC01_2203-Cryptodev
+name: Openwrt-JDC01_2203-CryptoDev.Ksmbd
 
 on:
   repository_dispatch:
