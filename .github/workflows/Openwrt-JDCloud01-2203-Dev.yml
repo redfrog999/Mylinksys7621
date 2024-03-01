@@ -2,8 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-#name: Openwrt-JDC01_tian0_21.02-Full
-name: 暂停维护
+name: Openwrt-JDC01_2203-Cryptodev
 
 on:
   repository_dispatch:
@@ -21,7 +20,7 @@ env:
   REPO_BRANCH: openwrt-21.02
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.JDCloud-2102-tian0.hnat
+  CONFIG_FILE: ramips-hnat/.config.JDCloud-2203-CryptoDev
   DIY_P1_SH: ramips-hnat/diy-part1-1.sh
   DIY_P2_SH: ramips-hnat/diy-part2-2.sh
   UPLOAD_BIN_DIR: false
