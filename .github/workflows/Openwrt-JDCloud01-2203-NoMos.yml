@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-JDC01_2102-Tian0.Ksmbd
+name: Openwrt-JDC01_2203-NoMos.Samba4
 
 on:
   repository_dispatch:
@@ -20,7 +20,7 @@ env:
   REPO_BRANCH: openwrt-21.02
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.JDCloud-2102-Tian0
+  CONFIG_FILE: ramips-hnat/.config.JDCloud-2203-NoMos
   DIY_P1_SH: ramips-hnat/diy-part1-1.sh
   DIY_P2_SH: ramips-hnat/diy-part2-2.sh
   UPLOAD_BIN_DIR: false
