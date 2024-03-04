@@ -3894,7 +3894,7 @@ CONFIG_PACKAGE_libxtables=y
 #
 # SSL
 #
-# CONFIG_PACKAGE_libgnutls=y
+# CONFIG_PACKAGE_libgnutls is not set
 
 #
 # Configuration
@@ -3968,7 +3968,7 @@ CONFIG_OPENSSL_ENGINE_BUILTIN_AFALG=y
 CONFIG_OPENSSL_ENGINE_BUILTIN_DEVCRYPTO=y
 CONFIG_PACKAGE_libopenssl-conf=y
 # CONFIG_PACKAGE_libopenssl-gost_engine is not set
-# CONFIG_PACKAGE_libwolfssl=y
+CONFIG_PACKAGE_libwolfssl=y
 
 #
 # wolfSSL Library Configuration
