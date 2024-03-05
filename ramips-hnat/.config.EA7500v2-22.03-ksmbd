@@ -3893,7 +3893,7 @@ CONFIG_PACKAGE_libxtables=y
 #
 # SSL
 #
-CONFIG_PACKAGE_libgnutls=y
+# CONFIG_PACKAGE_libgnutls=y
 
 #
 # Configuration
