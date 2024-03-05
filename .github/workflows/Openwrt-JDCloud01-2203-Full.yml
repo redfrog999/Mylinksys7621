@@ -2,8 +2,8 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-#name: Openwrt-JDC01_22.03_Inspeed-Ksmbd
-name: Openwrt-JDC01_23.05_Inspeed-Ksmbd
+name: Openwrt-JDC01_22.03_Inspeed-Ksmbd
+#name: Openwrt-JDC01_23.05_Inspeed-Ksmbd
 
 on:
   repository_dispatch:
@@ -17,14 +17,14 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  #REPO_URL: https://github.com/RavenCage/openwrt-official
-  REPO_URL: https://github.com/RavenCage/immortalwrt
-  #REPO_BRANCH: openwrt-22.03
-  REPO_BRANCH: openwrt-23.05
+  REPO_URL: https://github.com/RavenCage/openwrt-official
+  #REPO_URL: https://github.com/RavenCage/immortalwrt
+  REPO_BRANCH: openwrt-22.03
+  #REPO_BRANCH: openwrt-23.05
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  #CONFIG_FILE: ramips-hnat/.config.JDCloud-22.03-insider
-  CONFIG_FILE: ramips-hnat/.config.JDCloud-23.05
+  CONFIG_FILE: ramips-hnat/.config.JDCloud-22.03-insider
+  #CONFIG_FILE: ramips-hnat/.config.JDCloud-23.05
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   UPLOAD_BIN_DIR: false
