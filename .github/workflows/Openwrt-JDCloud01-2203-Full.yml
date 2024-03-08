@@ -27,6 +27,7 @@ env:
   CONFIG_FILE: ramips-hnat/.config.JDCloud-2203-Samba4
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
+  PACKAGES_SH: ramips-hnat/Packages.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -74,6 +75,12 @@ jobs:
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
+
+    - name: 加载 Custom Packages
+      run: |
+        chmod +x $PACKAGES_SH
+        cd /workdir/openwrt/package/
+        $GITHUB_WORKSPACE/$PACKAGES_SH         
 
     - name: Load custom configuration
       run: |
