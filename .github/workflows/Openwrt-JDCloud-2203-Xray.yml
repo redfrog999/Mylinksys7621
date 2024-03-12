@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2-Ksmbd.Xray-tian0
+name: OpenWrt JDCloud01.Xray-2203
 
 on:
   repository_dispatch:
@@ -20,7 +20,7 @@ env:
   REPO_BRANCH: openwrt-21.02
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.EA7500v2-full.tian0
+  CONFIG_FILE: ramips-hnat/.config.JDCloud-Xray.2203
   DIY_P1_SH: ramips-hnat/diy-part1-1.sh
   DIY_P2_SH: ramips-hnat/diy-part2-2.sh
   UPLOAD_BIN_DIR: false
