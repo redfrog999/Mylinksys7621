@@ -3,7 +3,7 @@
 #
 
 #name: Openwrt-JDC01_22.03_Inspeed-Ksmbd
-name: Openwrt-JDC01_2203_Half-Mos.Samba
+name: Openwrt-JDC01_2203_Samba4.PSW
 
 on:
   repository_dispatch:
