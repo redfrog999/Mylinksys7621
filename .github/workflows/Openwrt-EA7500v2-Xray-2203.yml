@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-EA7500v2_22.03_Xray.Go1.2x
+name: Openwrt-EA7500v2_22.03_Xray.NoMos
 
 on:
   repository_dispatch:
