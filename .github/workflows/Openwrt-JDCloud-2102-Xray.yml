@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDCloud01.Xray-2203
+name: OpenWrt JDCloud01.Get.Xray-21.02
 
 on:
   repository_dispatch:
