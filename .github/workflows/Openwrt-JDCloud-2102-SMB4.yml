@@ -72,6 +72,12 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
+    - name: 加载 Custom Packages
+      run: |
+        chmod +x $PACKAGES_SH
+        cd /workdir/openwrt/package/
+        $GITHUB_WORKSPACE/$PACKAGES_SH      
+
     - name: Load custom configuration
       run: |
         #[ -e files ] && mv files openwrt/files
