@@ -2,7 +2,8 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt_JDCloud01.SMB4.Fast-21.02
+#name: OpenWrt_JDCloud01.SMB4.Fast-21.02
+name: 暂停维护
 
 on:
   repository_dispatch:
