@@ -3,7 +3,8 @@
 #
 
 #name: Openwrt-JDC01_22.03_Inspeed-Ksmbd
-name: Openwrt-JDC01_2203_Samba4.PSW
+#name: Openwrt-JDC01_2203_Samba4.PSW
+name: 暂停维护
 
 on:
   repository_dispatch:
