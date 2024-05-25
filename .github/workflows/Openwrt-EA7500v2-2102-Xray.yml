@@ -16,7 +16,7 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  REPO_URL: https://github.com/RavenCage/immortalwrt
+  REPO_URL: https://github.com/redfrog999/immortalwrt
   REPO_BRANCH: openwrt-21.02
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
