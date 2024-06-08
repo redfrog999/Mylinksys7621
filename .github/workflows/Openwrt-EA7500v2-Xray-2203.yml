@@ -23,6 +23,7 @@ env:
   CONFIG_FILE: ramips-hnat/.config.EA7500v2-22.03-XRay
   DIY_P1_SH: ramips-hnat/diy-part1-1.sh
   DIY_P2_SH: ramips-hnat/diy-part2-2.sh
+  PACKAGES_SH: ramips-hnat/Packages.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
