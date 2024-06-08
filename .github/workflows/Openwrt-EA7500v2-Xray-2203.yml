@@ -2,8 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-#name: Openwrt-EA7500v2_22.03_Xray.NoMos
-name: 暂停维护
+name: Openwrt-EA7500v2_22.03_Xray.NoMos
 
 on:
   repository_dispatch:
@@ -17,7 +16,7 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  REPO_URL: https://github.com/RavenCage/openwrt-official
+  REPO_URL: https://github.com/redfrog999/openwrt
   REPO_BRANCH: openwrt-22.03
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
