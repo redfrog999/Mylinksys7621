@@ -16,10 +16,10 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  REPO_URL: https://github.com/redfrog999/openwrt
-  REPO_BRANCH: openwrt-22.03
-  #REPO_URL: https://github.com/redfrog999/immortalwrt
-  #REPO_BRANCH: openwrt-23.05  
+  #REPO_URL: https://github.com/redfrog999/openwrt
+  #REPO_BRANCH: openwrt-22.03
+  REPO_URL: https://github.com/redfrog999/lienol-openwrt
+  REPO_BRANCH: openwrt-22.03  
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
   CONFIG_FILE: ramips-hnat/.config.EA7500v2-22.03-XRay
