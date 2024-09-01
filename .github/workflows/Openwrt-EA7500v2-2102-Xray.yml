@@ -2,7 +2,8 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt_EA7500v2.Xray.PSW-2102
+#name: OpenWrt_EA7500v2.Xray.PSW-2102
+name: 暂停维护
 
 on:
   repository_dispatch:
