@@ -23,8 +23,8 @@ env:
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
   CONFIG_FILE: ramips-hnat/.config.JDCloud-22.03-Samba4
-  DIY_P1_SH: ramips-hnat/diy-part1-1.sh
-  DIY_P2_SH: ramips-hnat/diy-part2-2.sh
+  DIY_P1_SH: ramips-hnat/diy-part1.sh
+  DIY_P2_SH: ramips-hnat/diy-part2.sh
   PACKAGES_SH: ramips-hnat/Packages.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
