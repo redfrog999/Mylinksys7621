@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-JDC01_22.03_Inspeed-Ksmbd
+name: Openwrt-JDC01_22.03_Inspeed-Samba4
 
 on:
   repository_dispatch:
