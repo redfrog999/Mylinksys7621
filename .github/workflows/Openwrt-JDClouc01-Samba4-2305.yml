@@ -2,8 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-#name: Openwrt-JDCloud01_2305_Samba4
-name: 慢-暂停维护
+name: Openwrt-JDCloud01_2305_Samba4
 
 on:
   repository_dispatch:
