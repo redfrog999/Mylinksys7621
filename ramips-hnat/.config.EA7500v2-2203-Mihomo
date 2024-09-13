@@ -1712,7 +1712,7 @@ CONFIG_DROPBEAR_AGENTFORWARD=y
 # end of Configuration
 
 # CONFIG_PACKAGE_ead is not set
-# CONFIG_PACKAGE_firewall is not set
+CONFIG_PACKAGE_firewall=m
 CONFIG_PACKAGE_firewall4=y
 CONFIG_PACKAGE_fstools=y
 CONFIG_FSTOOLS_UBIFS_EXTROOT=y
