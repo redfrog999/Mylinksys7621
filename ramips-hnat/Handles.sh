@@ -4,7 +4,7 @@ PKG_PATCH="$GITHUB_WORKSPACE/wrt/package/"
 
 # mihomo
 if [ -d *"mihomo"* ]; then
-        #git clone https://$github/redfrog999/OpenWrt-mihomo  package/new/openwrt-mihomo
+        git clone https://$github/redfrog999/OpenWrt-mihomo  package/new/openwrt-mihomo
         mkdir -p files/etc/mihomo/run/ui
         
         curl -Lso files/etc/mihomo/run/Country.mmdb https://$github/NobyDa/geoip/raw/release/Private-GeoIP-CN.mmdb
