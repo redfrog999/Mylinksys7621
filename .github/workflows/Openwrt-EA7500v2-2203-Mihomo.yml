@@ -81,7 +81,7 @@ jobs:
 
     - name: 加载 Custom Handels
       run: |
-        chmod +x $PACKAGES_SH
+        chmod +x $HANDLES_SH
         cd /workdir/openwrt/package/
         $GITHUB_WORKSPACE/$HANDLES_SH
         
