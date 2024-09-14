@@ -15,6 +15,6 @@ if [ -d *"mihomo"* ]; then
         tar zxf metacubexd-gh-pages.tar.gz
         mv metacubexd-gh-pages files/etc/mihomo/run/ui/metacubexd
         
-	      cd $PKG_PATCH && echo "mihomo data has been updated!"
+        cd $PKG_PATCH && echo "mihomo data has been updated!"
        
 fi
