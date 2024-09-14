@@ -13,6 +13,5 @@ if [ -d *"mihomo"* ]; then
         curl -Lso metacubexd-gh-pages.tar.gz https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.tar.gz
         
         tar zxf metacubexd-gh-pages.tar.gz
-        mv metacubexd-gh-pages files/etc/mihomo/run/ui/metacubexd
-       
+        mv metacubexd-gh-pages files/etc/mihomo/run/ui/metacubexd     
 fi
