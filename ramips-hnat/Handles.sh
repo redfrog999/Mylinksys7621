@@ -6,7 +6,7 @@ PKG_PATCH="$GITHUB_WORKSPACE/wrt/package/"
 if [ -d *"mihomo"* ]; then
         git clone https://github.com/redfrog999/OpenWrt-mihomo  package/OpenWrt-mihomo
 
-        cd ./luci-app-mihomo/root/etc/mihomo/
+        cd openwrt/files/luci-app-mihomo/root/etc/mihomo/
         
         mkdir -p root/etc/mihomo/run/ui
         
