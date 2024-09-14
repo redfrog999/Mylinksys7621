@@ -24,6 +24,7 @@ env:
   DIY_P1_SH: ramips-hnat/diy-part1-1.sh
   DIY_P2_SH: ramips-hnat/diy-part2-2.sh
   PACKAGES_SH: ramips-hnat/Packages.sh
+  HANDLES_SH: ramips-hnat/Handles.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -78,6 +79,12 @@ jobs:
         cd /workdir/openwrt/package/
         $GITHUB_WORKSPACE/$PACKAGES_SH      
 
+    - name: 加载 Custom Handels
+      run: |
+        chmod +x $PACKAGES_SH
+        cd /workdir/openwrt/package/
+        $GITHUB_WORKSPACE/$HANDLES_SH
+        
     - name: Load custom configuration
       run: |
         #[ -e files ] && mv files openwrt/files
