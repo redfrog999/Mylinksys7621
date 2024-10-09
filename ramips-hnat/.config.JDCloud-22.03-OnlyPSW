@@ -142,7 +142,6 @@ CONFIG_PACKAGE_kmod-oid-registry=y
 CONFIG_PACKAGE_kmod-scsi-core=y
 CONFIG_PACKAGE_kmod-sit=y
 CONFIG_PACKAGE_kmod-tcp-bbr=y
-CONFIG_PACKAGE_kmod-tun=y
 CONFIG_PACKAGE_kmod-usb-ehci=y
 CONFIG_PACKAGE_kmod-usb-ohci=y
 CONFIG_PACKAGE_kmod-usb-storage=y
@@ -279,7 +278,6 @@ CONFIG_PACKAGE_uhttpd=y
 CONFIG_PACKAGE_uhttpd-mod-ubus=y
 CONFIG_PACKAGE_unzip=y
 CONFIG_PACKAGE_wget-ssl=y
-CONFIG_PACKAGE_yq=y
 # CONFIG_PACKAGE_wpad-basic-wolfssl is not set
 CONFIG_PACKAGE_wpad-wolfssl=y
 CONFIG_PACKAGE_wsdd2=y
