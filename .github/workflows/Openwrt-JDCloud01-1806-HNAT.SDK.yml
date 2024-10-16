@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-JDC01_22.03_OnlyPSW-samba4
+name: Openwrt-JDC01_18.06_237.HNAT.SDK-samba4
 
 on:
   repository_dispatch:
@@ -16,13 +16,13 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  REPO_URL: https://github.com/NicolasMe9907/openwrt
+  REPO_URL: https://github.com/NicolasMe9907/237-immortalwrt
   #REPO_URL: https://github.com/redfrog999/immortalwrt
-  REPO_BRANCH: openwrt-22.03
+  REPO_BRANCH: master
   #REPO_BRANCH: openwrt-21.02
   FILES: ramips-hnat/files
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
-  CONFIG_FILE: ramips-hnat/.config.JDCloud-22.03-OnlyPSW
+  CONFIG_FILE: ramips-hnat/.config.JDCloud-18.06-HNAT.SDK
   DIY_P1_SH: ramips-hnat/diy-part1.sh
   DIY_P2_SH: ramips-hnat/diy-part2.sh
   PACKAGES_SH: ramips-hnat/Packages.sh
