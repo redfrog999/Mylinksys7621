@@ -2,8 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-#name: Openwrt-JDCloud01_2305_MihomoR
-name: 效能太差停更
+name: Openwrt-JDCloud01_2305_MihomoR
 
 on:
   repository_dispatch:
