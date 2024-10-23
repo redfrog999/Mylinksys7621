@@ -2,9 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-#name: OpenWrt_EA7500v2.Mihomo-22.03
-name: Kiddin9挂了不再维护
-
+name: OpenWrt_EA7500v2.Mihomo-22.03
 
 on:
   repository_dispatch:
