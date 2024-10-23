@@ -23,6 +23,7 @@ UPDATE_PACKAGE() {
 UPDATE_PACKAGE "tinyfilemanager" "muink/luci-app-tinyfilemanager" "master"
 
 UPDATE_PACKAGE "design" "kenzok78/luci-theme-design" "js"
+UPDATE_PACKAGE "mihomo" "morytyann/OpenWrt-mihomo" "main"
 UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "js"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "master"
 UPDATE_PACKAGE "mihomo" "redfrog999/OpenWrt-mihomo" "main"
