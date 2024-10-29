@@ -23,8 +23,8 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package
 #git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 #git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
-echo '替换golang到1.22.x'
+echo '替换golang到1.23.x'
 rm -rf feeds/packages/lang/golang
-git clone -b 22.x --single-branch https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+git clone -b 23.x --single-branch https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 echo '=========Replace golang OK!========='
 
