@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-JDCloud01_2305_2305
+name: Openwrt-JDCloud01_2305_PSW
 
 on:
   repository_dispatch:
