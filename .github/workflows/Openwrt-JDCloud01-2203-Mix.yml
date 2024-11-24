@@ -2,7 +2,8 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-JDC01_22.03_OnlyPSW-Samba4
+#name: Openwrt-JDC01_22.03_OnlyPSW-Samba4
+name: 停用
 
 on:
   repository_dispatch:
