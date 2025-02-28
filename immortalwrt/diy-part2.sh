@@ -20,7 +20,7 @@ source ${GITHUB_WORKSPACE}/immortalwrt/function.sh
 # sed -i 's/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=6.6/g' ./target/linux/x86/Makefile
 
 # 默认IP由1.1修改为15.1
-sed -i 's/192.168.1.1/192.168.15.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.68.1/g' package/base-files/files/bin/config_generate
 
 # 最大连接数修改为65535
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
