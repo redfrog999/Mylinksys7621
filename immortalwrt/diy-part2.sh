@@ -19,7 +19,7 @@ source ${GITHUB_WORKSPACE}/immortalwrt/function.sh
 # 修改x86内核到6.6版
 # sed -i 's/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=6.6/g' ./target/linux/x86/Makefile
 
-# 默认IP由1.1修改为15.1
+# 默认IP由1.1修改为68.1
 sed -i 's/192.168.1.1/192.168.68.1/g' package/base-files/files/bin/config_generate
 
 # 最大连接数修改为65535
@@ -97,7 +97,7 @@ sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/conf
 rm -rf feeds/packages/utils/unzip
 git clone https://github.com/sbwml/feeds_packages_utils_unzip feeds/packages/utils/unzip
 
-# golang 1.23
+# golang 1.24
 rm -rf feeds/packages/lang/golang
 git clone --depth=1 https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
