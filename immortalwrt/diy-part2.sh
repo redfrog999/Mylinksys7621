@@ -81,7 +81,7 @@ git clone https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
 rm -rf feeds/luci/themes/luci-theme-argon
 # git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 merge_package openwrt-24.10 https://github.com/sbwml/luci-theme-argon package luci-theme-argon
-git clone --depth=1 -b js https://github.com/lwb1978/luci-theme-kucat package/luci-theme-kucat
+git clone --depth=1 -b js https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
 git clone --depth=1 -b main https://github.com/sirpdboy/luci-app-advancedplus  package/luci-app-advancedplus
 
 # 取消自添加主题的默认设置
