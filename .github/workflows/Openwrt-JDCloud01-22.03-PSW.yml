@@ -2,7 +2,8 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDC01 Imm-24.10
+#name: OpenWrt JDC01 Imm-24.10
+name: OpenWrt JDC01 Imm-22.03
 
 on:
   repository_dispatch:
@@ -11,12 +12,12 @@ on:
 #    - cron: 0 8 * * 5
 
 env:
-  REPO_URL: https://github.com/redfrog999/immortalwrt.git
-  REPO_BRANCH: openwrt-24.10
+  REPO_URL: https://github.com/redfrog999/openwrt.git
+  REPO_BRANCH: openwrt-22.03
   DEVICE_NAME: JDCloud-01
   FILES: immortalwrt/files
   FEEDS_CONF: immortalwrt/feeds.conf.default
-  CONFIG_FILE: immortalwrt/.config.JDC01-24.10-imm.bak
+  CONFIG_FILE: immortalwrt/.config.JDC01-22.03-imm.bak
   DIY_P1_SH: immortalwrt/diy-part1.sh
   DIY_P2_SH: immortalwrt/diy-part2.sh
   UPLOAD_BIN_DIR: false
