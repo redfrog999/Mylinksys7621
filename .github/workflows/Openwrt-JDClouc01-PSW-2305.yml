@@ -2,7 +2,8 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt JDC01 Im-23.05
+#name: OpenWrt JDC01 Im-23.05
+name: 终止更新
 
 on:
   repository_dispatch:
