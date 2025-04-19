@@ -33,9 +33,9 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwal
 rm -rf package/passwall-packages/{shadowsocks-rust,v2ray-geodata}
 merge_package v5 https://github.com/sbwml/openwrt_helloworld package/passwall-packages shadowsocks-rust v2ray-geodata
 # app
-rm -rf feeds/luci/applications/{luci-app-ssr-libev-server}
+rm -rf feeds/luci/applications/{luci-app-passwall,luci-app-ssr-libev-server}
 # git clone https://github.com/lwb1978/openwrt-passwall package/passwall-luci
-# git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci
+git clone https://github.com/redfrog999/openwrt-passwall package/passwall-luci
 # ------------------------------------------------------------
 
 # 优化socat中英翻译
