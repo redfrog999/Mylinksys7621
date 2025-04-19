@@ -2,7 +2,8 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2 Imm-21.02
+#name: OpenWrt EA7500v2 Imm-21.02
+name: 已被废弃
 
 on:
   repository_dispatch:
