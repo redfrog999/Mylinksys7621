@@ -24,8 +24,8 @@ env:
   FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
   CONFIG_FILE: ramips-hnat/.config.JDC01-24.10-tian0
   #CONFIG_FILE: ramips-hnat/.config.EA7500v2-22.03-Xray
-  DIY_P1_SH: ramips-hnat/diy-part1-1.sh
-  DIY_P2_SH: ramips-hnat/diy-part2-2.sh
+  DIY_P1_SH: ramips-hnat/diy-part1.sh
+  DIY_P2_SH: ramips-hnat/diy-part2.sh
   PACKAGES_SH: ramips-hnat/Packages.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
