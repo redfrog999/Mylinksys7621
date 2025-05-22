@@ -20,11 +20,11 @@ echo "========================="
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 sed -i '1i src-git kenzo https://github.com/redfrog999/openwrt-packages' feeds.conf.default
 # sed -i '$a src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main' feeds.conf.default
-# sed -i '$a src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' feeds.conf.default
-# sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main' feeds.conf.default
-# sed -i '$a src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git;main' feeds.conf.default
-# sed -i '$a src-git kucat https://github.com/sirpdboy/luci-theme-kucat.git;js' feeds.conf.default
-# sed -i '$a src-git luci-app-advancedplus https://github.com/sirpdboy/luci-app-advancedplus.git;main' feeds.conf.default
+sed -i '$a src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' feeds.conf.default
+sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main' feeds.conf.default
+sed -i '$a src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git;main' feeds.conf.default
+sed -i '$a src-git kucat https://github.com/sirpdboy/luci-theme-kucat.git;js' feeds.conf.default
+sed -i '$a src-git luci-app-advancedplus https://github.com/sirpdboy/luci-app-advancedplus.git;main' feeds.conf.default
 
 # rm -rf target/linux/ramips
 # svn export https://github.com/padavanonly/immortalwrt/trunk/target/linux/ramips target/linux/ramips
