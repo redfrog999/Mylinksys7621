@@ -23,6 +23,23 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package
 #git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 #git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
+# SmartDNS
+rm -rf feeds/luci/applications/luci-app-smartdns
+git clone https://github.com/lwb1978/luci-app-smartdns package/luci-app-smartdns
+# 替换immortalwrt 软件仓库smartdns版本为官方最新版
+rm -rf feeds/packages/net/smartdns
+cp -rf ${GITHUB_WORKSPACE}/patch/smartdns feeds/packages/net
+# 添加 smartdns-ui
+# echo "CONFIG_PACKAGE_smartdns-ui=y" >> .config
+
+# unzip
+rm -rf feeds/packages/utils/unzip
+git clone https://github.com/sbwml/feeds_packages_utils_unzip feeds/packages/utils/unzip
+
+# golang 1.25
+rm -rf feeds/packages/lang/golang
+git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+
 echo '替换golang到1.24.x'
 rm -rf feeds/packages/lang/golang
 git clone -b 24.x --single-branch https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
