@@ -15,7 +15,7 @@
 #echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
 
 # Add a feed source
-echo "src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall.git;main" >> "feeds.conf.default"
+echo "src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
 echo "src-git passwall https://github.com/Openwrt-Passwall/openwrt-passwall.git;main" >> "feeds.conf.default"
 
 # 添加插件源码
