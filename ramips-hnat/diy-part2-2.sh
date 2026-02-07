@@ -19,9 +19,9 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package
 # 強制給予 uci-defaults 腳本執行權限，防止雲端編譯權限丟失
 chmod +x files/etc/uci-defaults/99-physical-sovereignty
 
-# golang 1.25
+# golang 1.26
 rm -rf feeds/packages/lang/golang
-git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 echo '=========Replace golang OK!========='
 
 # 主题设置
