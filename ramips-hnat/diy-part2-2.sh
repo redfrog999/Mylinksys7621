@@ -23,3 +23,16 @@ chmod +x files/etc/uci-defaults/99-physical-sovereignty
 rm -rf feeds/packages/lang/golang
 git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 echo '=========Replace golang OK!========='
+
+# 主题设置
+git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora package/luci-theme-aurora
+echo "CONFIG_PACKAGE_luci-theme-aurora=y" >> .config.EA7500v2-2203-PSW
+
+# 取消自添加主题的默认设置
+find package/luci-theme-*/* -type f -print | grep '/root/etc/uci-defaults/' | while IFS= read -r file; do
+	sed -i '/set luci.main.mediaurlbase/d' "$file"
+done
+
+# 设置默认主题
+default_theme='aurora'
+sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
