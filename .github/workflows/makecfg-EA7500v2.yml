@@ -18,8 +18,8 @@ env:
   DEVICE_NAME: EA7500v2
   FILES: ramips-hnat/files
   CONFIG_FILE: ramips-hnat/.config.mt7621.All.bak
-  DIY_P1_SH: immortalwrt/diy-part1.sh
-  DIY_P2_SH: immortalwrt/diy-part2.sh
+  DIY_P1_SH: ramips-hnat/diy-part1.sh
+  DIY_P2_SH: ramips-hnat/diy-part2.sh
   TZ: Asia/Shanghai
 
 jobs:
