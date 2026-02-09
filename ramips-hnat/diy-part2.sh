@@ -19,7 +19,7 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package
 # 強制給予 uci-defaults 腳本執行權限，防止雲端編譯權限丟失
 chmod +x files/etc/uci-defaults/99-physical-sovereignty
 
-echo '替换golang到1.24x'
+echo '替换golang到1.26x'
 rm -rf feeds/packages/lang/golang
-git clone -b 24.x --single-branch https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+git clone -b 26.x --single-branch https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 echo '=========Replace golang OK!========='
