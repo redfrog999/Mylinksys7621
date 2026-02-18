@@ -23,3 +23,19 @@ echo '替换golang到1.26x'
 rm -rf feeds/packages/lang/golang
 git clone -b 26.x --single-branch https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 echo '=========Replace golang OK!========='
+
+#致敬老兵，让MT7621在ShellClash的加持下重新焕发战斗神采
+
+# 1. 强制重写全局编译参数，针对 MT7621 (MIPS 1004Kc/74kc) 深度优化
+sed -i 's/-O2/-O3 -march=mipsel -mtune=74kc -mdsp -mno-mips16 -fno-caller-saves/g' include/target.mk
+
+# 2. 优化特定的编译器标志，减少延迟
+sed -i 's/TARGET_CFLAGS:=/TARGET_CFLAGS:=-O3 -march=mipsel -mtune=74kc -mdsp -mno-mips16 -fno-caller-saves -fomit-frame-pointer -pipe /g' include/target.mk
+
+# 3. 增强内存管理和 F2FS 挂载的鲁棒性 (针对你的 55GB 硬盘红利)
+echo 'CONFIG_F2FS_FS=y' >> .config
+echo 'CONFIG_F2FS_STAT_FS=y' >> .config
+echo 'CONFIG_F2FS_FS_XATTR=y' >> .config
+
+# 4. 确保 HNAT (PPE) 在内核层面全量开启
+echo 'CONFIG_NET_MEDIATEK_SOC_HNAT=y' >> .config
