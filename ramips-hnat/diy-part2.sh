@@ -16,10 +16,13 @@ sed -i 's/192.168.1.1/192.168.68.1/g' package/base-files/files/bin/config_genera
 # 最大连接数修改为65535
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
-# 彻底清理 PassWall和残留核心库 (防止逻辑冲突)
-rm -rf feeds/packages/net/{xray*,v2ray*,sing-box,hysteria*,shadowsocks*,trojan*}
-rm -rf feeds/luci/applications/luci-app-passwall
-rm -rf package/passwall-packages
+# ------------------PassWall 彻底清除--------------------------
+# 移除 openwrt feeds 自带的核心库
+rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box,pdnsd-alt,chinadns-ng,dns2socks,dns2tcp,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview}
+# 核心库
+rm -rf package/passwall-packages/{shadowsocks-rust,v2ray-geodata}
+# app
+rm -rf feeds/luci/applications/{luci-app-passwall,luci-app-ssr-libev-server}
 
 # 強制給予 uci-defaults 腳本執行權限，防止雲端編譯權限丟失
 chmod +x files/etc/uci-defaults/99-physical-sovereignty
