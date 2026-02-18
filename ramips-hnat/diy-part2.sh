@@ -16,6 +16,11 @@ sed -i 's/192.168.1.1/192.168.68.1/g' package/base-files/files/bin/config_genera
 # 最大连接数修改为65535
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
+# 彻底清理 PassWall和残留核心库 (防止逻辑冲突)
+rm -rf feeds/packages/net/{xray*,v2ray*,sing-box,hysteria*,shadowsocks*,trojan*}
+rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf package/passwall-packages
+
 # 強制給予 uci-defaults 腳本執行權限，防止雲端編譯權限丟失
 chmod +x files/etc/uci-defaults/99-physical-sovereignty
 
