@@ -11,7 +11,7 @@
 #
 
 # Modify default IP 
-sed -i 's/192.168.1.1/192.168.68.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.77.1/g' package/base-files/files/bin/config_generate
 
 # 最大连接数修改为65535
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
@@ -39,11 +39,3 @@ sed -i 's/-O2/-O3 -march=mipsel -mtune=74kc -mdsp -mno-mips16 -fno-caller-saves/
 
 # 2. 优化特定的编译器标志，减少延迟
 sed -i 's/TARGET_CFLAGS:=/TARGET_CFLAGS:=-O3 -march=mipsel -mtune=74kc -mdsp -mno-mips16 -fno-caller-saves -fomit-frame-pointer -pipe /g' include/target.mk
-
-# 3. 增强内存管理和 F2FS 挂载的鲁棒性 (针对你的 55GB 硬盘红利)
-echo 'CONFIG_F2FS_FS=y' >> .config
-echo 'CONFIG_F2FS_STAT_FS=y' >> .config
-echo 'CONFIG_F2FS_FS_XATTR=y' >> .config
-
-# 4. 确保 HNAT (PPE) 在内核层面全量开启
-echo 'CONFIG_NET_MEDIATEK_SOC_HNAT=y' >> .config
