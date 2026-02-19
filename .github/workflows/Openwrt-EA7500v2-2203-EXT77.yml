@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: OpenWrt EA7500v2-22.03-sbwml 
+name: OpenWrt EA7500v2-22.03-EXT77 
 
 on:
   repository_dispatch:
