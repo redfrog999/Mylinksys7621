@@ -17,57 +17,6 @@ sed -i 's/192.168.1.1/10.0.10.1/g' package/base-files/files/bin/config_generate
 # 强制让编译工具链使用更稳定的指令集对齐
 #!/bin/bash
 
-# --- 1. Sing-Box 1.11.15 强制回滚手术 ---
-# 理由：MT7621 老兵不追求 1.12+ 的激进指令，保住 MIPS 兼容性红利
-if [ -d "feeds/passwall_packages/sing-box" ]; then
-    echo "========= 正在执行 Sing-Box 1.11.15 版本回溯 (老兵稳态) ========="
-    pushd feeds/passwall_packages/sing-box
-    
-    # 物理覆盖 Makefile 中的版本号与哈希值
-    sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.11.15/g' Makefile
-    sed -i 's/PKG_HASH:=.*/PKG_HASH:=97d58dd873d7cf9b5e4b4aca5516568f3b2e6f5c3dbc93241c82fff5e4a609fd/g' Makefile
-    
-    # 注入物理层调优：禁用 CGO，强制 GOMIPS 软浮动
-    sed -i 's/GO_PKG_VARS:=/GO_PKG_VARS:=CGO_ENABLED=0 GOMIPS=softfloat /g' Makefile
-    
-    # 强制禁用 mips16 压缩指令集，防止寄存器溢出错误
-    sed -i 's/PKG_BUILD_FLAGS:=.*/PKG_BUILD_FLAGS:=no-mips16/g' Makefile
-    
-    popd
-fi
-
-# --- 2. Passwall 占位兼容 (防报错) ---
-mkdir -p files/usr/share/xray/
-touch files/usr/share/xray/geoip.dat
-touch files/usr/share/xray/geosite.dat
-
-echo "========= DIY2 1.11.15 调教完成！ ========="
-
-# ------------------ Passwall Sing-Box SRS 物理固化版 --------------------------
-# 1. 创建 Sing-Box 专用规则路径
-mkdir -p files/usr/share/sing-box/
-
-# 定义 SRS 资源源 (SagerNet 官方规则集)
-SRS_URL="https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set"
-IP_URL="https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set"
-
-# 2. 下载核心分流 SRS (对应你之前的 AI/Google/YouTube 需求)
-for tag in google youtube microsoft telegram netflix github twitter reddit; do
-    wget -qO files/usr/share/sing-box/geosite-${tag}.srs ${SRS_URL}/geosite-${tag}.srs
-done
-
-# 3. 下载专项：AI (OpenAI/Anthropic) 和 GFW
-wget -qO files/usr/share/sing-box/geosite-openai.srs ${SRS_URL}/geosite-openai.srs
-wget -qO files/usr/share/sing-box/geosite-gfw.srs ${SRS_URL}/geosite-gfw.srs
-
-# 4. 下载中国 IP 段 SRS (用于分流大陆流量)
-wget -qO files/usr/share/sing-box/geoip-cn.srs ${IP_URL}/geoip-cn.srs
-wget -qO files/usr/share/sing-box/geosite-cn.srs ${SRS_URL}/geosite-cn.srs
-
-# 验证结果：如果文件大小为 0，说明下载失败
-find files/usr/share/sing-box/ -type f -empty -delete
-echo "========= Sing-Box SRS 物理资源下载成功！ ========="
-
 # -----------------強制給予 uci-defaults 腳本執行權限，防止雲端編譯權限丟失-------------------------
 chmod +x files/etc/uci-defaults/99-physical-sovereignty
 
