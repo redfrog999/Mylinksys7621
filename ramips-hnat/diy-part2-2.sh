@@ -40,6 +40,9 @@ wget -qO files/etc/xray/rules/china_ip.mrs https://raw.githubusercontent.com/v2f
 find files/etc/xray/rules/ -type f -empty -delete
 echo "========= MRS 物理资源下载成功，神兵已就绪！ ========="
 
+# -----------------強制給予 uci-defaults 腳本執行權限，防止雲端編譯權限丟失-------------------------
+chmod +x files/etc/uci-defaults/99-physical-sovereignty
+
 #------------------替换GoLang-----------------------
 echo '替换golang到1.26x'
 rm -rf feeds/packages/lang/golang
