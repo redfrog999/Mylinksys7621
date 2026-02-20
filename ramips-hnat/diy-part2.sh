@@ -38,7 +38,7 @@ wget -qO files/usr/share/sing-box/geoip-cn.srs ${IP_URL}/geoip-cn.srs
 wget -qO files/usr/share/sing-box/geosite-cn.srs ${SRS_URL}/geosite-cn.srs
 
 # 验证结果：如果文件大小为 0，说明下载失败
-find files/user/share/sing-box/ -type f -empty -delete
+find files/usr/share/sing-box/ -type f -empty -delete
 echo "========= Sing-Box SRS 物理资源下载成功！ ========="
 
 # -----------------強制給予 uci-defaults 腳本執行權限，防止雲端編譯權限丟失-------------------------
