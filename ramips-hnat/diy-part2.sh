@@ -13,9 +13,31 @@
 # Modify default IP 
 sed -i 's/192.168.1.1/192.168.77.1/g' package/base-files/files/bin/config_generate
 
-# 修正 MIPS 下 Sing-Box 的编译环境变量
-# 强制让编译工具链使用更稳定的指令集对齐
-sed -i 's/GO_PKG_VARS:=/GO_PKG_VARS:=CGO_ENABLED=0 /g' feeds/passwall_packages/sing-box/Makefile
+# --- 1. Sing-Box 1.11.15 强制回滚手术 ---
+# 理由：MT7621 老兵不追求 1.12+ 的激进指令，保住 MIPS 兼容性红利
+if [ -d "feeds/passwall_packages/sing-box" ]; then
+    echo "========= 正在执行 Sing-Box 1.11.15 版本回溯 (老兵稳态) ========="
+    pushd feeds/passwall_packages/sing-box
+    
+    # 物理覆盖 Makefile 中的版本号与哈希值
+    sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.11.15/g' Makefile
+    sed -i 's/PKG_HASH:=.*/PKG_HASH:=97d58dd873d7cf9b5e4b4aca5516568f3b2e6f5c3dbc93241c82fff5e4a609fd/g' Makefile
+    
+    # 注入物理层调优：禁用 CGO，强制 GOMIPS 软浮动
+    sed -i 's/GO_PKG_VARS:=/GO_PKG_VARS:=CGO_ENABLED=0 GOMIPS=softfloat /g' Makefile
+    
+    # 强制禁用 mips16 压缩指令集，防止寄存器溢出错误
+    sed -i 's/PKG_BUILD_FLAGS:=.*/PKG_BUILD_FLAGS:=no-mips16/g' Makefile
+    
+    popd
+fi
+
+# --- 2. Passwall 占位兼容 (防报错) ---
+mkdir -p files/usr/share/xray/
+touch files/usr/share/xray/geoip.dat
+touch files/usr/share/xray/geosite.dat
+
+echo "========= DIY2 1.11.15 调教完成！ ========="
 
 # 最大连接数修改为65535
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
