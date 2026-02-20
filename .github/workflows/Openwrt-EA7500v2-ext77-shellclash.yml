@@ -23,7 +23,7 @@ env:
   FEEDS_CONF: ramips-hnat/feeds.conf.default
   CONFIG_FILE: ramips-hnat/.config.EA7500v2-2203-shellclash
   DIY_P1_SH: ramips-hnat/diy-part1.sh
-  DIY_P2_SH: ramips-hnat/diy-part2.sh
+  DIY_P2_SH: ramips-hnat/diy-part2-3.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
