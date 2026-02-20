@@ -13,6 +13,10 @@
 # Modify default IP 
 sed -i 's/192.168.1.1/192.168.77.1/g' package/base-files/files/bin/config_generate
 
+# 修正 MIPS 下 Sing-Box 的编译环境变量
+# 强制让编译工具链使用更稳定的指令集对齐
+sed -i 's/GO_PKG_VARS:=/GO_PKG_VARS:=CGO_ENABLED=0 /g' feeds/passwall_packages/sing-box/Makefile
+
 # 最大连接数修改为65535
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
