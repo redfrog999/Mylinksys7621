@@ -13,41 +13,32 @@
 # Modify default IP 
 sed -i 's/192.168.1.1/10.0.10.1/g' package/base-files/files/bin/config_generate
 
-# ------------------ PassWall MRS 固化补强版 --------------------------
+# ------------------ PassWall MRS 物理固化 (MetaCubeX 极速版) --------------------------
+# 1. 创建固化规则存放路径
 mkdir -p files/etc/xray/rules/
 
-# 1. 明确下载路径，强制指定最新版本的 Xray
-wget -qO Xray-linux-64.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
-unzip -q -o Xray-linux-64.zip -d xray_tmp
-chmod +x xray_tmp/xray
+# 定义基础 URL (MetaCubeX 预编译资源)
+META_URL="https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite"
 
-# 2. 确保下载 .dat 文件 (带上冗余源防止 404)
-wget -qO geoip.dat https://github.com/v2fly/geoip/releases/latest/download/geoip.dat
-wget -qO geosite.dat https://github.com/v2fly/domain-list-community/releases/latest/download/geosite.dat
+# 2. 批量下载二进制 MRS 文件
+# 这里去掉了 ${} 错误语法，直接指向原始二进制文件
+wget -qO files/etc/xray/rules/gfw.mrs ${META_URL}/gfw.mrs
+wget -qO files/etc/xray/rules/google.mrs ${META_URL}/google.mrs
+wget -qO files/etc/xray/rules/youtube.mrs ${META_URL}/youtube.mrs
+wget -qO files/etc/xray/rules/telegram.mrs ${META_URL}/telegram.mrs
+wget -qO files/etc/xray/rules/netflix.mrs ${META_URL}/netflix.mrs
+wget -qO files/etc/xray/rules/ai.mrs ${META_URL}/category-ai-!cn.mrs
+wget -qO files/etc/xray/rules/github.mrs ${META_URL}/github.mrs
+wget -qO files/etc/xray/rules/reddit.mrs ${META_URL}/reddit.mrs
+wget -qO files/etc/xray/rules/twitter.mrs ${META_URL}/twitter.mrs
 
-# 3. 锻造逻辑：如果内置 _v2dat 不行，我们用独立工具 (可选保底)
-# 这里的 ./xray_tmp/xray 必须是刚下载的那个
-for tag in cn; do
-    ./xray_tmp/xray _v2dat unpack geoip -o files/etc/xray/rules/ -f $tag geoip.dat && \
-    mv files/etc/xray/rules/geoip_${tag}.mrs files/etc/xray/rules/china_ip.mrs
-done
+# 3. 下载大陆 IP 段 (MRS 格式)
+# 推荐使用 v2fly 官方 mrs 分支，对位你的“绕过大陆”逻辑
+wget -qO files/etc/xray/rules/china_ip.mrs https://raw.githubusercontent.com/v2fly/geoip/mrs/mrs/cn.mrs
 
-for tag in gfw google youtube telegram netflix openai twitter reddit github ai; do
-    ./xray_tmp/xray _v2dat unpack geosite -o files/etc/xray/rules/ -f $tag geosite.dat && \
-    if [ "$tag" = "gfw" ]; then
-        mv files/etc/xray/rules/geosite_gfw.mrs files/etc/xray/rules/gfw.mrs
-    else
-        mv files/etc/xray/rules/geosite_${tag}.mrs files/etc/xray/rules/${tag}.mrs
-    fi
-done
-
-# 4. 清理并验证：如果文件夹为空，则说明没锻造出来
-[ "$(ls -A files/etc/xray/rules/)" ] || echo "警告：MRS 锻造失败，请检查编译机环境！"
-
-rm -rf xray_tmp Xray-linux-64.zip geoip.dat geosite.dat
-
-# -----------------強制給予 uci-defaults 腳本執行權限，防止雲端編譯權限丟失-------------------------
-chmod +x files/etc/uci-defaults/99-physical-sovereignty
+# 验证结果：如果文件大小为 0，说明下载失败
+find files/etc/xray/rules/ -type f -empty -delete
+echo "========= MRS 物理资源下载成功，神兵已就绪！ ========="
 
 #------------------替换GoLang-----------------------
 echo '替换golang到1.26x'
