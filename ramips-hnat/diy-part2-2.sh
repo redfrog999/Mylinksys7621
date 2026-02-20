@@ -13,37 +13,37 @@
 # Modify default IP 
 sed -i 's/192.168.1.1/10.0.10.1/g' package/base-files/files/bin/config_generate
 
-# ------------------PassWall 重构MRS版--------------------------
-# 进入配置目录 (假定你在源码根目录)
+# ------------------ PassWall MRS 固化补强版 --------------------------
 mkdir -p files/etc/xray/rules/
 
-# 1. 下载转译工具 (xray-core)
-# 注意：我们用 x86_64 版本的 xray 来处理 rules
-wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
-unzip -q Xray-linux-64.zip -d xray_tmp
+# 1. 明确下载路径，强制指定最新版本的 Xray
+wget -qO Xray-linux-64.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+unzip -q -o Xray-linux-64.zip -d xray_tmp
 chmod +x xray_tmp/xray
 
-# 2. 获取原始数据源 (.dat)
-wget https://github.com/v2fly/geoip/releases/latest/download/geoip.dat
-wget https://github.com/v2fly/domain-list-community/releases/latest/download/geosite.dat
+# 2. 确保下载 .dat 文件 (带上冗余源防止 404)
+wget -qO geoip.dat https://github.com/v2fly/geoip/releases/latest/download/geoip.dat
+wget -qO geosite.dat https://github.com/v2fly/domain-list-community/releases/latest/download/geosite.dat
 
-# 3. 开始“锻造”：将重型 dat 拆解为轻量 mrs
-# 导出中国 IP 段 (用于绕过大陆)
-./xray_tmp/xray _v2dat unpack geoip -o files/etc/xray/rules/ -f cn geoip.dat
-mv files/etc/xray/rules/geoip_cn.mrs files/etc/xray/rules/china_ip.mrs
-
-# 导出 GFW 基础列表
-./xray_tmp/xray _v2dat unpack geosite -o files/etc/xray/rules/ -f gfw geosite.dat
-mv files/etc/xray/rules/geosite_gfw.mrs files/etc/xray/rules/gfw.mrs
-
-# 导出你要求的 AI/视频 专项列表 (Google, YouTube, Telegram, Netflix)
-for tag in google youtube telegram netflix openai twitter reddit github ai; do
-    ./xray_tmp/xray _v2dat unpack geosite -o files/etc/xray/rules/ -f $tag geosite.dat
-    # 统一命名格式
-    mv files/etc/xray/rules/geosite_${tag}.mrs files/etc/xray/rules/${tag}.mrs
+# 3. 锻造逻辑：如果内置 _v2dat 不行，我们用独立工具 (可选保底)
+# 这里的 ./xray_tmp/xray 必须是刚下载的那个
+for tag in cn; do
+    ./xray_tmp/xray _v2dat unpack geoip -o files/etc/xray/rules/ -f $tag geoip.dat && \
+    mv files/etc/xray/rules/geoip_${tag}.mrs files/etc/xray/rules/china_ip.mrs
 done
 
-# 4. 彻底清理垃圾，保持编译机环境整洁
+for tag in gfw google youtube telegram netflix openai twitter reddit github ai; do
+    ./xray_tmp/xray _v2dat unpack geosite -o files/etc/xray/rules/ -f $tag geosite.dat && \
+    if [ "$tag" = "gfw" ]; then
+        mv files/etc/xray/rules/geosite_gfw.mrs files/etc/xray/rules/gfw.mrs
+    else
+        mv files/etc/xray/rules/geosite_${tag}.mrs files/etc/xray/rules/${tag}.mrs
+    fi
+done
+
+# 4. 清理并验证：如果文件夹为空，则说明没锻造出来
+[ "$(ls -A files/etc/xray/rules/)" ] || echo "警告：MRS 锻造失败，请检查编译机环境！"
+
 rm -rf xray_tmp Xray-linux-64.zip geoip.dat geosite.dat
 
 # -----------------強制給予 uci-defaults 腳本執行權限，防止雲端編譯權限丟失-------------------------
