@@ -13,6 +13,10 @@
 # Modify default IP 
 sed -i 's/192.168.1.1/10.0.10.1/g' package/base-files/files/bin/config_generate
 
+# 修正 MIPS 下 Sing-Box 的编译环境变量
+# 强制让编译工具链使用更稳定的指令集对齐
+sed -i 's/GO_PKG_VARS:=/GO_PKG_VARS:=CGO_ENABLED=0 /g' feeds/passwall_packages/sing-box/Makefile
+
 # ------------------ Passwall Sing-Box SRS 物理固化版 --------------------------
 # 1. 创建 Sing-Box 专用规则路径
 mkdir -p files/usr/share/sing-box/
