@@ -13,32 +13,30 @@
 # Modify default IP 
 sed -i 's/192.168.1.1/10.0.10.1/g' package/base-files/files/bin/config_generate
 
-# ------------------ PassWall MRS 物理固化 (MetaCubeX 极速版) --------------------------
-# 1. 创建固化规则存放路径
-mkdir -p files/etc/xray/rules/
+# ------------------ Passwall Sing-Box SRS 物理固化版 --------------------------
+# 1. 创建 Sing-Box 专用规则路径
+mkdir -p files/usr/share/sing-box/
 
-# 定义基础 URL (MetaCubeX 预编译资源)
-META_URL="https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite"
+# 定义 SRS 资源源 (SagerNet 官方规则集)
+SRS_URL="https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set"
+IP_URL="https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set"
 
-# 2. 批量下载二进制 MRS 文件
-# 这里去掉了 ${} 错误语法，直接指向原始二进制文件
-wget -qO files/etc/xray/rules/gfw.mrs ${META_URL}/gfw.mrs
-wget -qO files/etc/xray/rules/google.mrs ${META_URL}/google.mrs
-wget -qO files/etc/xray/rules/youtube.mrs ${META_URL}/youtube.mrs
-wget -qO files/etc/xray/rules/telegram.mrs ${META_URL}/telegram.mrs
-wget -qO files/etc/xray/rules/netflix.mrs ${META_URL}/netflix.mrs
-wget -qO files/etc/xray/rules/ai.mrs ${META_URL}/category-ai-!cn.mrs
-wget -qO files/etc/xray/rules/github.mrs ${META_URL}/github.mrs
-wget -qO files/etc/xray/rules/reddit.mrs ${META_URL}/reddit.mrs
-wget -qO files/etc/xray/rules/twitter.mrs ${META_URL}/twitter.mrs
+# 2. 下载核心分流 SRS (对应你之前的 AI/Google/YouTube 需求)
+for tag in google youtube microsoft telegram netflix github twitter reddit; do
+    wget -qO files/usr/share/sing-box/geosite-${tag}.srs ${SRS_URL}/geosite-${tag}.srs
+done
 
-# 3. 下载大陆 IP 段 (MRS 格式)
-# 推荐使用 v2fly 官方 mrs 分支，对位你的“绕过大陆”逻辑
-wget -qO files/etc/xray/rules/china_ip.mrs https://raw.githubusercontent.com/v2fly/geoip/mrs/mrs/cn.mrs
+# 3. 下载专项：AI (OpenAI/Anthropic) 和 GFW
+wget -qO files/usr/share/sing-box/geosite-openai.srs ${SRS_URL}/geosite-openai.srs
+wget -qO files/usr/share/sing-box/geosite-gfw.srs ${SRS_URL}/geosite-gfw.srs
+
+# 4. 下载中国 IP 段 SRS (用于分流大陆流量)
+wget -qO files/usr/share/sing-box/geoip-cn.srs ${IP_URL}/geoip-cn.srs
+wget -qO files/usr/share/sing-box/geosite-cn.srs ${SRS_URL}/geosite-cn.srs
 
 # 验证结果：如果文件大小为 0，说明下载失败
-find files/etc/xray/rules/ -type f -empty -delete
-echo "========= MRS 物理资源下载成功，神兵已就绪！ ========="
+find files/user/share/sing-box/ -type f -empty -delete
+echo "========= Sing-Box SRS 物理资源下载成功！ ========="
 
 # -----------------強制給予 uci-defaults 腳本執行權限，防止雲端編譯權限丟失-------------------------
 chmod +x files/etc/uci-defaults/99-physical-sovereignty
